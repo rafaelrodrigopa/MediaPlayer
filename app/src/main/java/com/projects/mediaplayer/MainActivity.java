@@ -23,4 +23,17 @@ public class MainActivity extends AppCompatActivity {
             mediaPlayer.start();
         }
     }
+
+    public void pausarMusica(View view){
+        if(mediaPlayer.isPlaying()){
+            mediaPlayer.pause();
+        }
+    }
+
+    public void pararMusica(View view){
+        if(mediaPlayer.isPlaying()){
+            mediaPlayer.stop();
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.teste);
+        }
+    }
 }
